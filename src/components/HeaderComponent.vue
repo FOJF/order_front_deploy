@@ -12,7 +12,7 @@
                     </div>
                 </v-col>
                 <v-col class="text-center">
-                    <v-btn :to="'/'">SPRING_AUTO_BUILD SHOP</v-btn>
+                    <v-btn :to="'/'">SPRING_AUTO_BUILD_AUTO_DEPLOY SHOP</v-btn>
                 </v-col>
                 <v-col class="d-flex justify-end">
                     <v-btn v-if="accessToken" :to="'/order/cart'">장바구니 {{ cartProductCount > 0 ? '('+cartProductCount+')' : ''
