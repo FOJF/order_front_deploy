@@ -37,7 +37,7 @@
         },
         methods: {
             async doLogin() {
-                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/member-service/member/doLogin`, {
+                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/member/doLogin`, {
                     // 로그인에 필요한 데이터
                     email: this.email,
                     password: this.password
