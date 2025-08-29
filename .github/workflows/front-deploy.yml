@@ -34,10 +34,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ap-northeast-2
 
-      # - name: deploy to s3
-      #   run: aws s3 cp ./dist  --recursive
       - name: deploy to s3
-        run: aws s3 cp ./dist ${{ secrets.S3_BUCKET_URL }} --recursive recursive
+        run: aws s3 cp ./dist ${{ secrets.S3_BUCKET_URL }} --recursive
 
       - name: invalidate cloudfront
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
